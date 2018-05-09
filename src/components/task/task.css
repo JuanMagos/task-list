@@ -1,0 +1,7 @@
+.Task{
+    background-color: gold;
+    max-width: 500px;
+    min-width: 500px;
+    float: right;
+    margin-right: 200px;
+}

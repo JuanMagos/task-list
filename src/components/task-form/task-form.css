@@ -1,0 +1,14 @@
+input{
+    text-align: top;
+    display: flex;
+    align-items: flex-start;
+    height: 150px;
+    width: 350px;
+    font-size: 20px;
+}
+
+button{
+    width: 358px;
+    height: 40px;
+    background-color: blue
+}

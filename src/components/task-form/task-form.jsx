@@ -14,7 +14,7 @@ class TaskForm extends Component {
         return (
             <div className="taskForm">
             <input ref={input =>{this.textInput = input;}} type="text"/>
-            <button onClick={this.addTask} >Crear</button>
+            <button type="button" className="btn btn-primary" onClick={this.addTask} >Crear</button>
             </div>
         )
     }

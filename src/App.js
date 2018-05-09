@@ -12,11 +12,7 @@ class App extends Component {
   constructor(){
     super();
     this.state = {
-      tasks:[
-        // {taskId:1, taskContent: 'tarea1'},
-        // {taskId:2, taskContent: 'tarea2'}
-
-      ]
+      tasks:[]
     };
 
     this.app = firebase.initializeApp(DB_CONFIG);
@@ -51,12 +47,6 @@ this.setState({tasks});
   }
 
   addTask(task){
-    // let {tasks} = this.state;
-    // tasks.push({
-    //   taskId: tasks.length + 1,
-    //   taskContent: task
-    // });
-    // this.setState({tasks})
     this.db.push().set({taskContent: task})
   }
   render() {
@@ -64,7 +54,7 @@ this.setState({tasks});
       <div className="taskContainer">
 
         <div className="tasksHeader">
-          <h1>Quiero dormir</h1>  
+          <h1>Lista de tareas</h1>  
         </div>
         <div className="tasksBody">
         <ul>
