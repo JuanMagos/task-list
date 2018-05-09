@@ -1,0 +1,88 @@
+[debug] [2018-05-09T14:08:22.257Z] ----------------------------------------------------------------------
+[debug] [2018-05-09T14:08:22.260Z] Command:       /home/juan/.nvm/versions/node/v9.5.0/bin/node /home/juan/.nvm/versions/node/v9.5.0/bin/firebase deploy --token 1/8lK3lEY0IQcuAwAFmWEVJfp_rRF0JcGHgl44mKfGJ6_mmGjp_-bbGGhOIFQrJ6G9
+[debug] [2018-05-09T14:08:22.260Z] CLI Version:   3.18.4
+[debug] [2018-05-09T14:08:22.260Z] Platform:      linux
+[debug] [2018-05-09T14:08:22.260Z] Node Version:  v9.5.0
+[debug] [2018-05-09T14:08:22.260Z] Time:          Wed May 09 2018 09:08:22 GMT-0500 (CDT)
+[debug] [2018-05-09T14:08:22.260Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-05-09T14:08:22.270Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-05-09T14:08:22.270Z] > authorizing via --token option
+[debug] [2018-05-09T14:08:22.271Z] > refreshing access token with scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-05-09T14:08:22.272Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ { refresh_token: '1/8lK3lEY0IQcuAwAFmWEVJfp_rRF0JcGHgl44mKfGJ6_mmGjp_-bbGGhOIFQrJ6G9',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email openid https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase https://www.googleapis.com/auth/cloud-platform' } 
+ Wed May 09 2018 09:08:22 GMT-0500 (CDT)
+[debug] [2018-05-09T14:08:22.731Z] <<< HTTP RESPONSE 200
+[debug] [2018-05-09T14:08:22.733Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/tasksreact-ca876  
+  
+ Wed May 09 2018 09:08:22 GMT-0500 (CDT)
+[debug] [2018-05-09T14:08:23.382Z] <<< HTTP RESPONSE 200
+[debug] [2018-05-09T14:08:23.384Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/tasksreact-ca876/tokens  
+  
+ Wed May 09 2018 09:08:23 GMT-0500 (CDT)
+[debug] [2018-05-09T14:08:23.842Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'tasksreact-ca876'...
+[info] 
+[info] i  deploying database, hosting
+[debug] [2018-05-09T14:08:24.845Z] Error: ENOENT: no such file or directory, open '/home/juan/Documentos/React/tareasreact/database-rules.json'
+    at Object.fs.openSync (fs.js:663:18)
+    at Object.fs.readFileSync (fs.js:568:33)
+    at Config.readProjectFile (/home/juan/.nvm/versions/node/v9.5.0/lib/node_modules/firebase-tools/lib/config.js:176:22)
+    at /home/juan/.nvm/versions/node/v9.5.0/lib/node_modules/firebase-tools/lib/deploy/database/prepare.js:52:42
+    at /home/juan/.nvm/versions/node/v9.5.0/lib/node_modules/firebase-tools/node_modules/lodash/lodash.js:4925:15
+    at baseForOwn (/home/juan/.nvm/versions/node/v9.5.0/lib/node_modules/firebase-tools/node_modules/lodash/lodash.js:3010:24)
+    at /home/juan/.nvm/versions/node/v9.5.0/lib/node_modules/firebase-tools/node_modules/lodash/lodash.js:4894:18
+    at Function.forEach (/home/juan/.nvm/versions/node/v9.5.0/lib/node_modules/firebase-tools/node_modules/lodash/lodash.js:9342:14)
+    at module.exports (/home/juan/.nvm/versions/node/v9.5.0/lib/node_modules/firebase-tools/lib/deploy/database/prepare.js:49:5)
+    at _chain (/home/juan/.nvm/versions/node/v9.5.0/lib/node_modules/firebase-tools/lib/deploy/index.js:26:38)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2018-05-09T14:36:47.632Z] ----------------------------------------------------------------------
+[debug] [2018-05-09T14:36:47.638Z] Command:       /home/juan/.nvm/versions/node/v9.5.0/bin/node /home/juan/.nvm/versions/node/v9.5.0/bin/firebase deploy
+[debug] [2018-05-09T14:36:47.639Z] CLI Version:   3.18.4
+[debug] [2018-05-09T14:36:47.639Z] Platform:      linux
+[debug] [2018-05-09T14:36:47.639Z] Node Version:  v9.5.0
+[debug] [2018-05-09T14:36:47.640Z] Time:          Wed May 09 2018 09:36:47 GMT-0500 (CDT)
+[debug] [2018-05-09T14:36:47.640Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-05-09T14:36:47.719Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-05-09T14:36:47.720Z] > authorizing via signed-in user
+[debug] [2018-05-09T14:36:47.725Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-05-09T14:36:47.726Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ { refresh_token: '1/rblQSdbibhkOvqSsnn7m7fNIfXZKMXhOATNXB7oS7F0',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Wed May 09 2018 09:36:47 GMT-0500 (CDT)
+[debug] [2018-05-09T14:36:48.523Z] <<< HTTP RESPONSE 200
+[debug] [2018-05-09T14:36:48.626Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/tasksreact-ca876  
+  
+ Wed May 09 2018 09:36:48 GMT-0500 (CDT)
+[debug] [2018-05-09T14:36:49.451Z] <<< HTTP RESPONSE 200
+[debug] [2018-05-09T14:36:49.453Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/tasksreact-ca876/tokens  
+  
+ Wed May 09 2018 09:36:49 GMT-0500 (CDT)
+[debug] [2018-05-09T14:36:50.373Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'tasksreact-ca876'...
+[info] 
+[info] i  deploying database, hosting
+[debug] [2018-05-09T14:36:51.476Z] Error: ENOENT: no such file or directory, open '/home/juan/Documentos/React/tareasreact/database-rules.json'
+    at Object.fs.openSync (fs.js:663:18)
+    at Object.fs.readFileSync (fs.js:568:33)
+    at Config.readProjectFile (/home/juan/.nvm/versions/node/v9.5.0/lib/node_modules/firebase-tools/lib/config.js:176:22)
+    at /home/juan/.nvm/versions/node/v9.5.0/lib/node_modules/firebase-tools/lib/deploy/database/prepare.js:52:42
+    at /home/juan/.nvm/versions/node/v9.5.0/lib/node_modules/firebase-tools/node_modules/lodash/lodash.js:4925:15
+    at baseForOwn (/home/juan/.nvm/versions/node/v9.5.0/lib/node_modules/firebase-tools/node_modules/lodash/lodash.js:3010:24)
+    at /home/juan/.nvm/versions/node/v9.5.0/lib/node_modules/firebase-tools/node_modules/lodash/lodash.js:4894:18
+    at Function.forEach (/home/juan/.nvm/versions/node/v9.5.0/lib/node_modules/firebase-tools/node_modules/lodash/lodash.js:9342:14)
+    at module.exports (/home/juan/.nvm/versions/node/v9.5.0/lib/node_modules/firebase-tools/lib/deploy/database/prepare.js:49:5)
+    at _chain (/home/juan/.nvm/versions/node/v9.5.0/lib/node_modules/firebase-tools/lib/deploy/index.js:26:38)
+[error] 
+[error] Error: An unexpected error has occurred.

@@ -1,0 +1,9 @@
+language: javascript
+node_js:
+  -"9.5"
+  script:
+    -npm start
+  install:
+    - npm install -g firebase-tools
+  after_succes:
+    -firebase deploy --token $FIREBASE_TOKEN
