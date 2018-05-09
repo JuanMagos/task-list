@@ -42,3 +42,38 @@
     at _chain (/home/juan/.nvm/versions/node/v9.5.0/lib/node_modules/firebase-tools/lib/deploy/index.js:26:38)
 [error] 
 [error] Error: An unexpected error has occurred.
+[debug] [2018-05-09T15:51:26.978Z] ----------------------------------------------------------------------
+[debug] [2018-05-09T15:51:26.980Z] Command:       /home/juan/.nvm/versions/node/v9.5.0/bin/node /home/juan/.nvm/versions/node/v9.5.0/bin/firebase deploy
+[debug] [2018-05-09T15:51:26.980Z] CLI Version:   3.18.4
+[debug] [2018-05-09T15:51:26.981Z] Platform:      linux
+[debug] [2018-05-09T15:51:26.981Z] Node Version:  v9.5.0
+[debug] [2018-05-09T15:51:26.981Z] Time:          Wed May 09 2018 10:51:26 GMT-0500 (CDT)
+[debug] [2018-05-09T15:51:26.981Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-05-09T15:51:27.062Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-05-09T15:51:27.062Z] > authorizing via signed-in user
+[debug] [2018-05-09T15:51:27.068Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/tasksreact-ca876  
+  
+ Wed May 09 2018 10:51:27 GMT-0500 (CDT)
+[debug] [2018-05-09T15:51:27.622Z] <<< HTTP RESPONSE 200
+[debug] [2018-05-09T15:51:27.623Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/tasksreact-ca876/tokens  
+  
+ Wed May 09 2018 10:51:27 GMT-0500 (CDT)
+[debug] [2018-05-09T15:51:28.131Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'tasksreact-ca876'...
+[info] 
+[info] i  deploying database, hosting
+[debug] [2018-05-09T15:51:29.147Z] Error: ENOENT: no such file or directory, open '/home/juan/Documentos/React/tareasreact/database-rules.json'
+    at Object.fs.openSync (fs.js:663:18)
+    at Object.fs.readFileSync (fs.js:568:33)
+    at Config.readProjectFile (/home/juan/.nvm/versions/node/v9.5.0/lib/node_modules/firebase-tools/lib/config.js:176:22)
+    at /home/juan/.nvm/versions/node/v9.5.0/lib/node_modules/firebase-tools/lib/deploy/database/prepare.js:52:42
+    at /home/juan/.nvm/versions/node/v9.5.0/lib/node_modules/firebase-tools/node_modules/lodash/lodash.js:4925:15
+    at baseForOwn (/home/juan/.nvm/versions/node/v9.5.0/lib/node_modules/firebase-tools/node_modules/lodash/lodash.js:3010:24)
+    at /home/juan/.nvm/versions/node/v9.5.0/lib/node_modules/firebase-tools/node_modules/lodash/lodash.js:4894:18
+    at Function.forEach (/home/juan/.nvm/versions/node/v9.5.0/lib/node_modules/firebase-tools/node_modules/lodash/lodash.js:9342:14)
+    at module.exports (/home/juan/.nvm/versions/node/v9.5.0/lib/node_modules/firebase-tools/lib/deploy/database/prepare.js:49:5)
+    at _chain (/home/juan/.nvm/versions/node/v9.5.0/lib/node_modules/firebase-tools/lib/deploy/index.js:26:38)
+[error] 
+[error] Error: An unexpected error has occurred.
