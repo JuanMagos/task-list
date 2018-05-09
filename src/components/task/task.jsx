@@ -10,7 +10,7 @@ class Task extends Component {
     }
 
     handleRemove(id){
-
+        this.props.removeTask(id);
     }
     render(){
         return(

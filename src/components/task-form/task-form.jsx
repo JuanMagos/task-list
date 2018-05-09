@@ -8,13 +8,13 @@ class TaskForm extends Component {
     }
 
     addTask(){
-
+        this.props.addTask(this.textInput.value)
     }
     render(){
         return (
             <div className="taskForm">
-            <input ref={input =>{this.textInput = input;}} onClick={this.addTask} type="text"/>
-            <button>Crear</button>
+            <input ref={input =>{this.textInput = input;}} type="text"/>
+            <button onClick={this.addTask} >Crear</button>
             </div>
         )
     }

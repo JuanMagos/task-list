@@ -1,5 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
+
+import firebase from 'firebase';
+import {DB_CONFIG} from './config/config';
+import 'firebase/database';
+
 import Task from './components/task/task.jsx'
 import TaskForm from './components/task-form/task-form'
 
@@ -8,25 +13,51 @@ class App extends Component {
     super();
     this.state = {
       tasks:[
-        {taskId:1, taskContent: 'tarea1'},
-        {taskId:2, taskContent: 'tarea2'}
+        // {taskId:1, taskContent: 'tarea1'},
+        // {taskId:2, taskContent: 'tarea2'}
 
       ]
     };
+
+    this.app = firebase.initializeApp(DB_CONFIG);
+    this.db = this.app.database().ref().child('tasks');
+
     this.addTask = this.addTask.bind(this);
+    this.removeTask = this.removeTask.bind(this);
+
   }
 
-  removeTask(){
+  componentDidMount (){
+    const { tasks } = this.state;
+    this.db.on('child_added', snap => {
+      tasks.push({
+        taskId: snap.key,
+        taskContent: snap.val().taskContent
+      })
+      this.setState({tasks});
+    });
+    this.db.on('child_removed', snap => {
+      for(let i = 0; i< tasks.length; i++){
+        if(tasks[i].taskId= snap.key){
+        tasks.splice(i, 1);
+        }
+      }
+this.setState({tasks});
+    });
+  }
 
+  removeTask(taskId){
+    this.db.child(taskId).remove();
   }
 
   addTask(task){
-    let {tasks} = this.state;
-    tasks.push({
-      taskId: tasks.length + 1,
-      taskContent: task
-    });
-    this.setState({tasks})
+    // let {tasks} = this.state;
+    // tasks.push({
+    //   taskId: tasks.length + 1,
+    //   taskContent: task
+    // });
+    // this.setState({tasks})
+    this.db.push().set({taskContent: task})
   }
   render() {
     return (
@@ -44,6 +75,7 @@ class App extends Component {
               taskContent={task.taskContent}
               taskId={task.taskId}
               key={task.taskId}
+              removeTask={this.removeTask}
               />
             )
           })
