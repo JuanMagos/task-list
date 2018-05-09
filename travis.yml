@@ -1,8 +1,8 @@
-language: javascript
+language: node_js
 node_js:
   -"9.5"
   script:
-    -npm run test
+    -npm install
   install:
     - npm install -g firebase-tools
   after_succes:
